@@ -1,7 +1,7 @@
 ---
 title: GRQ01 - Programming Rust - Ch 3
 author: 
-- Your Name Here
+- Your Name
 geometry: margin=1in
 ...
 
