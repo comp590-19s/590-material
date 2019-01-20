@@ -7,7 +7,7 @@ geometry: margin=1in
 
 ## Chapter 4. Ownership
 
-*1. The first couple pages of Chapter 4 make a detailed case for Rust's ownership model. In a paragraph of your own words, how would you describe to a friend in CS on the idea of ownwership in Rust?*
+*1. The first couple of pages of Chapter 4 make a detailed case for Rust's ownership model. In a paragraph of your own words, how would you describe to a friend in CS on the idea of ownwership in Rust?*
 
 Your answer here...
 
@@ -23,7 +23,7 @@ Your answer here...
 
 Your answer here...
 
-*5. Besides initialization, what four operations cause a values ownership to change in Rust? What is a change of ownership called?*
+*5. Besides initialization, what four operations cause a value's ownership to change in Rust? What is a change of ownership called?*
 
 Your answer here...
 
@@ -37,7 +37,7 @@ Your answer here...
 
 ## Chapter 5. References
 
-*8. When it comes to the relationship between a reference and a referent, what an extremely important rule to know and follow? Why?*
+*8. When it comes to the relationship between a reference and a referent, what is an extremely important rule to know and follow? Why?*
 
 Your answer here...
 
