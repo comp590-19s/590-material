@@ -11,8 +11,8 @@ int main() {
     // Request memory on the heap, assign random
     // value. Never free the memory. Loop... infinite.
     for (;;) {
-        uint32_t* ptr = malloc(sizeof(uint32_t));
-        *ptr = (random() % 10);
+        uint32_t* ptr = malloc(1000 * sizeof(uint32_t));
+        *ptr = (random() % 100) + 100;
         printf("%d\n", *ptr);
     }
 
