@@ -1,0 +1,7 @@
+digraph {
+    n0 [label="<l>lft|<r>rgt" shape="record"];
+    n1 [label="a"];
+    n2 [label="b"];
+    n0:l -> n1;
+    n0:r -> n2;
+}

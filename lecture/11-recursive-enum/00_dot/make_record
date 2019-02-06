@@ -1,0 +1,2 @@
+#!/bin/bash
+dot -Tpng 01_record.dot > /vagrant/lec11_dot_output.png
