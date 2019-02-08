@@ -1,0 +1,2 @@
+#!/bin/bash
+cargo run | dot -Tpng > /vagrant/lec12_dot_output.png
