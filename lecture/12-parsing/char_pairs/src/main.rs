@@ -17,7 +17,6 @@ fn main() {
     let tokens = Tokenizer::new(&source);
     // 2. Parsing
     let parse_tree = Parser::new(tokens).parse_value();
-    println!("{:?}", parse_tree);
     // 3. Code Generation
     let target = DotGen::new(&parse_tree).to_string();
     println!("{}", target);

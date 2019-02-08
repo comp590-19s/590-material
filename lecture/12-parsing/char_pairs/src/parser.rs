@@ -19,30 +19,24 @@ impl<'tokens> Parser<'tokens> {
         }
     }
 
+    // Top-level, public parse entry point to parse a CharPair Value.
+    // Grammar: Value -> Char | Pair
     pub fn parse_value(&mut self) -> Value {
         if let Some(token) = self.tokens.peek() {
             match *token {
-                Token::Char(c) => return self.parse_char(c),
-                Token::LParen => return self.parse_pair(),
+                // TODO #2: Match *first* token of Char or Pair
                 _ => { /* Fall through to panic */ }
             }
         }
         panic!("parse_value: Expected Char | Pair");
     }
 
-    fn parse_char(&mut self, c: char) -> Value {
-        self.take(Token::Char(c));
-        Value::Char(c)
-    }
+    // TODO #1) Define methods for non-terminals of grammar.
+    
+    // Grammar: Char -> Any Token::Char
+    
+    // Grammar: Pair -> LParen Value Space Value RParen
 
-    fn parse_pair(&mut self) -> Value {
-        self.take(Token::LParen);
-        let lhs = self.parse_value();
-        self.take(Token::Space);
-        let rhs = self.parse_value();
-        self.take(Token::RParen);
-        Value::Pair(Box::new(lhs), Box::new(rhs))
-    }
 
     // Helper function to "take" the next token from the tokens iterator
     // and ensure that it is exactly what we expected. If not, we'll panic.
