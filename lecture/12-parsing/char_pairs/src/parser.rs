@@ -24,7 +24,7 @@ impl<'tokens> Parser<'tokens> {
     pub fn parse_value(&mut self) -> Value {
         if let Some(token) = self.tokens.peek() {
             match *token {
-                // TODO #2: Match *first* token of Char or Pair
+                // TODO - Decide which rule to apply based on peek.
                 _ => { /* Fall through to panic */ }
             }
         }
