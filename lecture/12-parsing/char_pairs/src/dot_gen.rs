@@ -1,4 +1,4 @@
-use super::parser::Node;
+use super::parser::Value;
 
 pub struct DotGen {
     lines: Vec<String>,
@@ -6,7 +6,7 @@ pub struct DotGen {
 }
 
 impl DotGen {
-    pub fn new(node: &Node) -> DotGen {
+    pub fn new(node: &Value) -> DotGen {
         let mut dot_gen = DotGen {
             lines: Vec::new(),
             id: 0
@@ -24,10 +24,10 @@ impl DotGen {
         dot
     }
 
-    fn visit(&mut self, dot: &Node) -> usize {
+    fn visit(&mut self, dot: &Value) -> usize {
         match dot {
-            Node::Char(c) => self.emit_char(*c),
-            Node::Pair(lhs, rhs) => {
+            Value::Char(c) => self.emit_char(*c),
+            Value::Pair(lhs, rhs) => {
                 let pair_id = self.emit_pair();
                 let lhs_id = self.visit(lhs); 
                 let rhs_id = self.visit(rhs); 

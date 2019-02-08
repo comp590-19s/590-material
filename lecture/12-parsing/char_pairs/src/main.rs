@@ -13,7 +13,12 @@ use self::tokenizer::Tokenizer;
 
 fn main() {
     let source = read_line();
-    let parse_tree = Parser::new(Tokenizer::new(&source)).parse_expr();
+    // 1. Tokenization / Lexing
+    let tokens = Tokenizer::new(&source);
+    // 2. Parsing
+    let parse_tree = Parser::new(tokens).parse_value();
+    println!("{:?}", parse_tree);
+    // 3. Code Generation
     let target = DotGen::new(&parse_tree).to_string();
     println!("{}", target);
 }
