@@ -1,0 +1,2 @@
+Kris: Hello, world!
+Kris: This is a sample text file.
