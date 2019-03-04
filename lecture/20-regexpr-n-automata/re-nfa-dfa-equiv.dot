@@ -1,0 +1,20 @@
+digraph {
+
+    layout = neato;
+    ranksep = 0.9;
+    nodesep = 0.9;
+
+    re  [label = "RE", pos = "1,1.732!"];
+    dfa [label = "DFA", pos = "0,0!"];
+    nfa [label = "NFA", pos = "2,0!"];
+
+    re -> nfa;
+    nfa -> re;
+
+    dfa -> re
+    re -> dfa;
+
+    dfa -> nfa;
+    nfa -> dfa;
+
+}

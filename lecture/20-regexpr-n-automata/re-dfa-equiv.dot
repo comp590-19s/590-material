@@ -1,0 +1,13 @@
+digraph {
+    rankdir = LR; 
+    layout = dot;
+    ranksep = 0.9;
+    nodesep = 0.9;
+
+    re  [label = "RE"];
+    dfa [label = "DFA"];
+
+    dfa -> re
+    re -> dfa;
+
+}
