@@ -1,10 +1,10 @@
 #[macro_use]
 extern crate lalrpop_util;
 
-lalrpop_mod!(pub v1_parens);
+lalrpop_mod!(pub v1_eval);
 
 fn main() {
-    let parser = v1_parens::TermParser::new();
-    println!("{:?}", parser.parse("1"));
-    println!("{:?}", parser.parse("(2)"));
+    let parser = v1_eval::TermParser::new();
+    println!("{:?}", parser.parse("590"));
+    println!("{:?}", parser.parse("(590)"));
 }
