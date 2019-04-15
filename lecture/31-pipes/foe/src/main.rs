@@ -8,7 +8,7 @@ fn main()  -> std::io::Result<()> {
 
     loop {
         i += 1;
-        file.write_all(format!("stdout: {}\n", i).as_bytes())?;
+        file.write_all(format!("file  : {}\n", i).as_bytes())?;
         println!("stdout: {}", i);
         eprintln!("stderr: {}", i);
     }
