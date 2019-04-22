@@ -1,0 +1,11 @@
+[package]
+name = "hello-ffi"
+version = "0.1.0"
+authors = ["Kris Jordan <kris@cs.unc.edu>"]
+edition = "2018"
+
+[lib]
+name = "hello"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
